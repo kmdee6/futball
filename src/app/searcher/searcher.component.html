@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div id="timeDiv">
+    <select class="dropdown aligner" #time [(ngModel)]="selectedTimeline">
+      <option *ngFor="let time of timelines" [value]="time.value">{{time.title}}</option>
+    </select>
+  </div>
+  <div id="gamesDiv">
+    <select class="dropdown aligner" #game [(ngModel)]="selectedGame">
+      <option *ngFor="let game of games" [value]="game.value">{{game.number}}</option>
+    </select>
+    <label>matches for</label>
+  </div>
+  <div id="teamDiv">
+    <select class="dropdown aligner" #team [(ngModel)]="selectedTeam">
+      <option *ngFor="let team of teams" [value]="team.id">{{team.name}}</option>
+    </select>
+  </div>
+</div>
